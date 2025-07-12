@@ -110,7 +110,7 @@ def launch_setup(context, params, param_name_suffix=''):
         launch_ros.actions.Node(
             package='realsense2_camera',
             namespace=LaunchConfiguration('camera_namespace' + param_name_suffix),
-            name=LaunchConfiguration('camera_name' + param_name_suffix),
+            name='realsense2',
             executable='realsense2_camera_node',
             parameters=[params, params_from_file],
             output=_output,
